@@ -2,71 +2,102 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ROWS 3
-#define COLS 6
-
-int random_bit() {
-    return rand() % 2;
+void swapRows(int **matrix, int row1, int row2, int cols) {
+    for (int i = 0; i < cols; i++) {
+        int temp = matrix[row1][i];
+        matrix[row1][i] = matrix[row2][i];
+        matrix[row2][i] = temp;
+    }
 }
 
-void init_matrix(int matrix[ROWS][COLS]) {
-    for (int i = 0; i < ROWS; i++) {
-        for (int j = 0; j < COLS; j++) {
-            matrix[i][j] = random_bit();
+void gaussianElimination(int **matrix, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        // 找主元
+        if (matrix[i][i] == 0) {
+            for (int j = i + 1; j < rows; j++) {
+                if (matrix[j][i] != 0) {
+                    swapRows(matrix, i, j, cols);
+                    break;
+                }
+            }
+        }
+
+        // 如果主元仍然為0，則跳過這一行
+        if (matrix[i][i] == 0) continue;
+
+        for (int j = i + 1; j < rows; j++) {
+            if (matrix[j][i] == 0) continue;
+            int factor = matrix[j][i];
+            for (int k = 0; k < cols; k++) {
+                matrix[j][k] = (matrix[j][k] - factor * matrix[i][k]) % 2;
+            }
         }
     }
 }
 
-void print_matrix(int matrix[ROWS][COLS]) {
-    for (int i = 0; i < ROWS; i++) {
-        for (int j = 0; j < COLS; j++) {
+int isFullRank(int **matrix, int rows, int cols) {
+    int rank = 0;
+    for (int i = 0; i < rows; i++) {
+        int nonZero = 0;
+        for (int j = 0; j < cols; j++) {
+            if (matrix[i][j] != 0) {
+                nonZero = 1;
+                break;
+            }
+        }
+        if (nonZero) {
+            rank++;
+        }
+    }
+    return rank == rows;
+}
+
+void printMatrix(int **matrix, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
             printf("%d ", matrix[i][j]);
         }
         printf("\n");
     }
 }
 
-int is_full_rank(int matrix[ROWS][COLS]) {
-    int rank = 0;
-    for (int row = 0; row < ROWS; row++) {
-        if (matrix[row][rank] == 0) {
-            for (int i = row + 1; i < ROWS; i++) {
-                if (matrix[i][rank] == 1) {
-                    for (int j = 0; j < COLS; j++) {
-                        int temp = matrix[row][j];
-                        matrix[row][j] = matrix[i][j];
-                        matrix[i][j] = temp;
-                    }
-                    break;
-                }
-            }
-        }
-        if (matrix[row][rank] == 1) {
-            for (int i = 0; i < ROWS; i++) {
-                if (i != row && matrix[i][rank] == 1) {
-                    for (int j = 0; j < COLS; j++) {
-                        matrix[i][j] ^= matrix[row][j];
-                    }
-                }
-            }
-            rank++;
-        }
-    }
-    return rank == ROWS;
-}
-
 int main() {
-    srand(time(NULL));
-    int matrix[ROWS][COLS];
+    int rows = 4;
+    int cols = 8;
 
-    init_matrix(matrix);
-    print_matrix(matrix);
-
-    if (is_full_rank(matrix)) {
-        printf("矩陣是Full Rank\n");
-    } else {
-        printf("矩陣不是Full Rank\n");
+    // 生成同位檢測矩陣H
+    int **H = (int **)malloc(rows * sizeof(int *));
+    for (int i = 0; i < rows; i++) {
+        H[i] = (int *)malloc(cols * sizeof(int));
     }
+
+    srand(time(0));
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            H[i][j] = rand() % 2;
+        }
+    }
+
+    printf("原始矩陣 H:\n");
+    printMatrix(H, rows, cols);
+
+    // 使用高斯消去法簡化矩陣
+    gaussianElimination(H, rows, cols);
+
+    printf("\n簡化後的矩陣 H:\n");
+    printMatrix(H, rows, cols);
+
+    // 檢查是否為Full Rank
+    if (isFullRank(H, rows, cols)) {
+        printf("\n矩陣 H 是 Full Rank\n");
+    } else {
+        printf("\n矩陣 H 不是 Full Rank\n");
+    }
+
+    for (int i = 0; i < rows; i++) {
+        free(H[i]);
+    }
+    free(H);
 
     return 0;
 }
