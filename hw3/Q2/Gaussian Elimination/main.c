@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "nml.h"
+#include <math.h>
 
 #define ROWS 4
 #define COLS 8
@@ -80,21 +80,63 @@ void generateMatrix(int matrix[ROWS][COLS]) {
 	}
 }
 
-void rowEchelonForm(int matrix[ROWS][COLS]){
-	nml_mat* m1;
-	for(int i = 0; i < ROWS; i++){
-		for(int j = 0; j < COLS; j++){
-			nml_mat_set(m1, i, j, (double)matrix[i][j]);
-		}
-	}
-	printf("\nm1=\n");
-	nml_mat_print(m1);
-	nml_mat *refm1 = nml_mat_ref(m1);
-	printf("\nrefm1=\n");
-	nml_mat_print(refm1);
+void rowEchelonForm(int matrix[ROWS][COLS]) {
+    int i, j, k, a, b;
+    float tem;
+    float mat[80][80];    
+    for(i = 0; i < ROWS; i++) {
+        for(j = 0; j < COLS; j++) {
+            mat[i][j] = (double)matrix[i][j];
+        }
+    }
+    // Program Logic
+    for(k = 0; k < ROWS; k++) {
+        // Ensure the pivot element is not zero
+        if(mat[k][k] == 0) {
+            for(i = k + 1; i < ROWS; i++) {
+                if(mat[i][k] != 0) {
+                    // Swap rows k and i
+                    for(j = 0; j < COLS; j++) {
+                        float temp = mat[k][j];
+                        mat[k][j] = mat[i][j];
+                        mat[i][j] = temp;
+                    }
+                    break;
+                }
+            }
+        }
+        
+        if(mat[k][k] != 1) {
+            float temp = mat[k][k];
+            if(temp == 0)
+                continue; // Avoiding division by zero
+            for(j = 0; j < COLS; j++) {
+                mat[k][j] = (mat[k][j]) / temp;
+            }
+        }
+        
+        for(i = k + 1; i < ROWS; i++) {
+            tem = mat[i][k];
+            for(j = k; j < COLS; j++) {
+                mat[i][j] = mat[i][j] - (mat[k][j] * tem);
+            }
+        }
 
-	nml_mat_free(m1);
-	nml_mat_free(refm1);
+        // Printing Each Step
+        printf("\n**************************\n");
+        if(k == ROWS - 1)
+            printf("Row Echelon form is : \n\n");
+        else
+            printf("Step %d\n\n", k + 1);
+        for(a = 0; a < ROWS; a++) {
+            for(b = 0; b < COLS; b++) {
+                if(mat[a][b] == -0)
+                    mat[a][b] = 0; // Simply converting '-0' into '0'
+                printf("%.1f\t", mat[a][b]);
+            }
+            printf("\n");
+        }
+    }
 }
 
 int main(){
@@ -107,7 +149,7 @@ int main(){
         }
         printf("\n");
     }
-	rintf("****************************\n");
+	printf("****************************\n");
 	rowEchelonForm(matrix);
 
 	return 0;
