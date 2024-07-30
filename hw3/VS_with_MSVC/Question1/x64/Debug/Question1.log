@@ -1,0 +1,5 @@
+﻿  main.c
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question1\main.c(1,1): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question1\main.c(25,1): warning C4716: 'printResultCase1': 必須傳回值
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question1\main.c(44,1): warning C4716: 'printResultCase2': 必須傳回值
+  Question1.vcxproj -> C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\x64\Debug\Question1.exe

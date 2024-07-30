@@ -1,0 +1,77 @@
+﻿  main.c
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\main.c(1,1): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\main.c(35,11): warning C4244: '函式': 將 'time_t' 轉換為 'unsigned int'，由於類型不同，可能導致資料遺失
+  nml.c
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(142,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(152,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(153,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(177,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(188,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(189,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(191,30): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(202,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(203,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(227,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(228,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(238,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(265,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(266,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(290,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(291,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(316,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(339,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(340,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(353,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(374,14): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(395,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(417,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(431,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(432,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(451,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(452,23): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(468,23): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(470,20): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(515,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(538,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(552,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(555,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(585,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(600,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(603,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(639,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(640,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(662,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(663,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(677,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(678,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(679,20): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(690,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(691,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(704,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(722,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(738,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(753,11): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(753,30): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(770,20): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(787,11): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(787,30): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(803,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(827,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(878,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(894,20): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(916,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(927,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(960,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(990,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1040,15): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1043,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1075,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1088,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1100,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1102,18): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1122,16): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1158,14): warning C4018: '<': signed/unsigned 不相符
+C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\Question2\nml.c(1169,18): warning C4018: '<': signed/unsigned 不相符
+  nml_util.c
+  正在產生程式碼...
+  Question2.vcxproj -> C:\Users\user\Downloads\week3_C_李冠緯\VS_with_MSVC\x64\Debug\Question2.exe
