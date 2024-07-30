@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include <math.h>
 #include <stdbool.h>
@@ -20,7 +21,6 @@ void shuffle(int *array, int n) {
 }
 
 void generateMatrix(int matrix[ROWS][COLS]) {
-    printf("enter\n");
     int colWeights[COLS] = {0};
     int indices[COLS];
     
@@ -31,58 +31,82 @@ void generateMatrix(int matrix[ROWS][COLS]) {
 
     srand(time(NULL));
 
-    // Assign 1s to each row
-    for (int i = 0; i < ROWS; i++) {
-        // Shuffle the indices array
-        shuffle(indices, COLS);
-        // Set the first ROW_WEIGHT elements to 1
-        for (int j = 0; j < ROW_WEIGHT; j++) {
-            matrix[i][indices[j]] = 1;
-            colWeights[indices[j]]++;
+    bool error;
+    do{
+        error = 0;
+        for (int i = 0; i < ROWS; i++) {
+            for(int j = 0; j < COLS; j ++)
+            matrix[i][j] = 0;
         }
-    }
-
-    // Check and fix column weights
-	for (int j = 0; j < COLS; j++) {
-    // Fix columns with too few 1s
-        while (colWeights[j] < COL_WEIGHT) {
-            int row;
-            // Find a row to switch a 0 to 1
-            do {
-                row = rand() % ROWS;
-            } while (matrix[row][j] == 1);
-            // Find a column to switch a 1 to 0
-            int switchCol;
-            do {
-                switchCol = rand() % COLS;
-            } while (matrix[row][switchCol] == 0 || colWeights[switchCol] <= COL_WEIGHT);
-            // Perform the switch
-            matrix[row][j] = 1;
-            matrix[row][switchCol] = 0;
-            colWeights[j]++;
-            colWeights[switchCol]--;
+        memset(colWeights, 0, sizeof(colWeights));
+        // Assign 1s to each row
+        for (int i = 0; i < ROWS; i++) {
+            // Shuffle the indices array
+            shuffle(indices, COLS);
+            // Set the first ROW_WEIGHT elements to 1
+            for (int j = 0; j < ROW_WEIGHT; j++) {
+                matrix[i][indices[j]] = 1;
+                colWeights[indices[j]]++;
+            }
+            printf("\n");
         }
-        // Fix columns with too many 1s
-		while (colWeights[j] > COL_WEIGHT) {    //問題在此
-			int row;
-			// Find a row to switch a 1 to 0
-			do {
-				row = rand() % ROWS;
-			} while (matrix[row][j] == 0);
-			// Find a column to switch a 0 to 1
-			int switchCol;
-			do {
-				switchCol = rand() % COLS;
-			} while (matrix[row][switchCol] == 1 || colWeights[switchCol] >= COL_WEIGHT);
-			// Perform the switch
-			matrix[row][j] = 0;
-			matrix[row][switchCol] = 1;
-			colWeights[j]--;
-			colWeights[switchCol]++;
-		}
-	}
 
-    printf("end\n");
+        // Check and fix column weights
+        for (int j = 0; j < COLS; j++) {
+        // Fix columns with too few 1s
+            while (colWeights[j] < COL_WEIGHT) {
+                int row;
+                // Find a row to switch a 0 to 1
+                do {
+                    row = rand() % ROWS;
+                } while (matrix[row][j] == 1);
+                // Find a column to switch a 1 to 0
+                int switchCol;
+                int try = 0;
+                do {
+                    switchCol = rand() % COLS;
+                    try++;
+                    if(try > 100){
+                        error = 1;
+                        break;
+                    }
+                } while (matrix[row][switchCol] == 0 || colWeights[switchCol] <= COL_WEIGHT);
+                if(error == 1)  break;
+                // Perform the switch
+                matrix[row][j] = 1;
+                matrix[row][switchCol] = 0;
+                colWeights[j]++;
+                colWeights[switchCol]--;
+            }
+            // Fix columns with too many 1s
+            while (colWeights[j] > COL_WEIGHT) {    //問題在此
+                int row;
+                // Find a row to switch a 1 to 0
+                do {
+                    row = rand() % ROWS;
+                } while (matrix[row][j] == 0);
+                // Find a column to switch a 0 to 1
+                int switchCol;
+                int try = 0;
+                do {
+                    switchCol = rand() % COLS;
+                    try++;
+                    if(try > 100){
+                        error = 1;
+                        break;
+                    }
+                } while (matrix[row][switchCol] == 1 || colWeights[switchCol] >= COL_WEIGHT);
+                if(error == 1)  break;
+                // Perform the switch
+                matrix[row][j] = 0;
+                matrix[row][switchCol] = 1;
+                colWeights[j]--;
+                colWeights[switchCol]++;
+            }
+            if(error == 1)  break;
+        }
+
+    }while(error);
 }
 
 void rowEchelonForm(int matrix[ROWS][COLS]) {
