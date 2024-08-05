@@ -6,7 +6,7 @@
 #define COLS 10
 
 //輸出左上右下8字型
-int printResultCase1(int up , int down, int right, int middle, int left, int currentRow){
+void printResultCase1(int up , int down, int right, int middle, int left, int currentRow){
     int output[ROWS][COLS];
     memset(output, 0, sizeof(output));
     output[up][left] = 1;
@@ -25,7 +25,7 @@ int printResultCase1(int up , int down, int right, int middle, int left, int cur
 }
 
 //輸出左下右上8字型
-int printResultCase2(int up , int down, int right, int middle, int left, int currentRow){
+void printResultCase2(int up , int down, int right, int middle, int left, int currentRow){
     int output[ROWS][COLS];
     memset(output, 0, sizeof(output));
     output[down][left] = 1;
@@ -52,11 +52,11 @@ int main(){
 
     //讀取矩陣
     int rows, cols;
-    fscanf(file, "%d %d", &rows, &cols);
+    fscanf_s(file, "%d %d", &rows, &cols);
     int matrix[ROWS][COLS];
     for(int i = 0; i < ROWS; i++){
         for(int j = 0; j < COLS; j++){
-            fscanf(file, "%d", &matrix[i][j]);
+            fscanf_s(file, "%d", &matrix[i][j]);
         }
     }
     fclose(file);
@@ -79,6 +79,7 @@ int main(){
 
     //計算N(6)
     int numOfN6 = 0;
+    //8字型
     for(int currentRow = 1; currentRow < ROWS - 1; currentRow++){
         for(int left = 0; left < COLS - 2; left++){    //先找中間水平線左邊的1
             if(matrix[currentRow][left] == 0) continue;
@@ -113,6 +114,197 @@ int main(){
             }
         }
     }
+    //L型
+    for (int startRow = 0; startRow < ROWS; startRow++) {
+        for (int startCol = 0; startCol < COLS; startCol++) {
+            if (matrix[startRow][startCol] == 1) {
+                //L型-1
+                /*
+                █
+                █
+                █
+                █
+                ████
+                */
+                //printf("L-1:\n");
+                for (int down = startRow + 1; down < ROWS; down++) {
+                    if (matrix[down][startCol] == 1) {
+                        for (int right = startCol + 1; right < COLS; right++) {
+                            if (matrix[down][right] == 1) {
+                                for (int rightLineRow = down - 1; rightLineRow > startRow; rightLineRow--) {
+                                    if (matrix[rightLineRow][right] == 1) {
+                                        for (int upLineCol = startCol + 1; upLineCol < right; upLineCol++) {
+                                            if (matrix[startRow][upLineCol] == 1) {
+                                                if (matrix[rightLineRow][upLineCol] == 1) {
+                                                    numOfN6++;
+                                                    /*顯示圖形
+                                                    int print[ROWS][COLS];
+                                                    memset(print, 0, sizeof(print));
+                                                    print[startRow][startCol] = 1;
+                                                    print[down][startCol] = 1;
+                                                    print[down][right] = 1;
+                                                    print[rightLineRow][right] = 1;
+                                                    print[startRow][upLineCol] = 1;
+                                                    print[rightLineRow][upLineCol] = 1;
+                                                    for (int i = 0; i < ROWS; i++) {
+                                                        for (int j = 0; j < COLS; j++) {
+                                                            printf("%d ", print[i][j]);
+                                                        }
+                                                        printf("\n");
+                                                    }
+                                                    printf("-------------------------\n");
+                                                    */
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //L型-2
+                /*
+                      █
+                      █
+                      █
+                      █
+                ████
+                */
+                //printf("L-2:\n");
+                for (int down = startRow + 1; down < ROWS; down++) {
+                    if (matrix[down][startCol] == 1) {
+                        for (int left = startCol - 1; left >= 0; left--) {
+                            if (matrix[down][left] == 1) {
+                                for (int leftLineRow = down - 1; leftLineRow > startRow; leftLineRow--) {
+                                    if (matrix[leftLineRow][left] == 1) {
+                                        for (int upLineCol = startCol - 1; upLineCol > left; upLineCol--) {
+                                            if (matrix[startRow][upLineCol] == 1) {
+                                                if (matrix[leftLineRow][upLineCol] == 1) {
+                                                    numOfN6++;
+                                                    /*顯示圖形
+                                                    int print[ROWS][COLS];
+                                                    memset(print, 0, sizeof(print));
+                                                    print[startRow][startCol] = 1;
+                                                    print[down][startCol] = 1;
+                                                    print[down][left] = 1;
+                                                    print[leftLineRow][left] = 1;
+                                                    print[startRow][upLineCol] = 1;
+                                                    print[leftLineRow][upLineCol] = 1;
+                                                    for (int i = 0; i < ROWS; i++) {
+                                                        for (int j = 0; j < COLS; j++) {
+                                                            printf("%d ", print[i][j]);
+                                                        }
+                                                        printf("\n");
+                                                    }
+                                                    printf("-------------------------\n");
+                                                    */
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //L型-3
+                /*
+                ████
+                █
+                █
+                █
+                █
+                */
+                //printf("L-3:\n");
+                for (int up = startRow - 1; up >= 0; up--) {
+                    if (matrix[up][startCol] == 1) {
+                        for (int right = startCol + 1; right < COLS; right++) {
+                            if (matrix[up][right] == 1) {
+                                for (int rightLineRow = up + 1; rightLineRow < startRow; rightLineRow++) {
+                                    if (matrix[rightLineRow][right] == 1) {
+                                        for (int downLineCol = startCol + 1; downLineCol < right; downLineCol++) {
+                                            if (matrix[startRow][downLineCol] == 1) {
+                                                if (matrix[rightLineRow][downLineCol] == 1) {
+                                                    numOfN6++;
+                                                    /*顯示圖形
+                                                    int print[ROWS][COLS];
+                                                    memset(print, 0, sizeof(print));
+                                                    print[startRow][startCol] = 1;
+                                                    print[up][startCol] = 1;
+                                                    print[up][right] = 1;
+                                                    print[rightLineRow][right] = 1;
+                                                    print[startRow][downLineCol] = 1;
+                                                    print[rightLineRow][downLineCol] = 1;
+                                                    for (int i = 0; i < ROWS; i++) {
+                                                        for (int j = 0; j < COLS; j++) {
+                                                            printf("%d ", print[i][j]);
+                                                        }
+                                                        printf("\n");
+                                                    }
+                                                    printf("-------------------------\n");
+                                                    */
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //L型-4
+                /*
+                ████
+                      █
+                      █
+                      █
+                      █
+                */
+                //printf("L-4:\n");
+                for (int up = startRow - 1; up >= 0; up--) {
+                    if (matrix[up][startCol] == 1) {
+                        for (int left = startCol - 1; left >= 0; left--) {
+                            if (matrix[up][left] == 1) {
+                                for (int leftLineRow = up + 1; leftLineRow < startRow; leftLineRow++) {
+                                    if (matrix[leftLineRow][left] == 1) {
+                                        for (int downLineCol = startCol - 1; downLineCol > left; downLineCol--) {
+                                            if (matrix[startRow][downLineCol] == 1) {
+                                                if (matrix[leftLineRow][downLineCol] == 1) {
+                                                    numOfN6++;
+                                                    /*
+                                                    int print[ROWS][COLS];
+                                                    memset(print, 0, sizeof(print));
+                                                    print[startRow][startCol] = 1;
+                                                    print[up][startCol] = 1;
+                                                    print[up][left] = 1;
+                                                    print[leftLineRow][left] = 1;
+                                                    print[startRow][downLineCol] = 1;
+                                                    print[leftLineRow][downLineCol] = 1;
+                                                    for (int i = 0; i < ROWS; i++) {
+                                                        for (int j = 0; j < COLS; j++) {
+                                                            printf("%d ", print[i][j]);
+                                                        }
+                                                        printf("\n");
+                                                    }
+                                                    printf("-------------------------\n");
+                                                    */
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+ 
     printf("N(4): %d\n", numOfN4);
     printf("N(6): %d\n", numOfN6);
     

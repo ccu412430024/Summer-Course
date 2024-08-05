@@ -44,7 +44,7 @@ void nml_vlog(
 ){
 #if DEBUG_TRUE
   char buffer[BUFFER_SIZE];
-  char* level;
+  char* level = NULL;   //char* level;因SDL檢查會報錯，所以改成char* level = NULL;
   int stop;
 
   if (stderr == stream) {

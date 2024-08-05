@@ -1,12 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\Downloads\\week3_C_\u674E\u51A0\u7DEF\\VS_with_MSVC\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Ken\\Coding\\Visual Studio Projects\\Summer-Course\\homework3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6422543D-9144-4621-AE84-878CACE8186D}|Question1\\Question1.vcxproj|D:\\Ken\\Coding\\Visual Studio Projects\\Summer-Course\\homework3\\Question1\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6422543D-9144-4621-AE84-878CACE8186D}|Question1\\Question1.vcxproj|solutionrelative:Question1\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9C483D9-46BE-42BE-9640-681EC0C463D0}|Question2\\Question2.vcxproj|D:\\Ken\\Coding\\Visual Studio Projects\\Summer-Course\\homework3\\Question2\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C9C483D9-46BE-42BE-9640-681EC0C463D0}|Question2\\Question2.vcxproj|solutionrelative:Question2\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\Ken\\Coding\\Visual Studio Projects\\Summer-Course\\homework3\\Question1\\main.c",
+              "RelativeDocumentMoniker": "Question1\\main.c",
+              "ToolTip": "D:\\Ken\\Coding\\Visual Studio Projects\\Summer-Course\\homework3\\Question1\\main.c",
+              "RelativeToolTip": "Question1\\main.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-08-05T02:52:32.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\Ken\\Coding\\Visual Studio Projects\\Summer-Course\\homework3\\Question2\\main.c",
+              "RelativeDocumentMoniker": "Question2\\main.c",
+              "ToolTip": "D:\\Ken\\Coding\\Visual Studio Projects\\Summer-Course\\homework3\\Question2\\main.c",
+              "RelativeToolTip": "Question2\\main.c",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAYAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-08-05T02:52:26.532Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -221,12 +221,12 @@ nml_mat *nml_mat_fromfile(const char *file) {
 nml_mat *nml_mat_fromfilef(FILE *f) {
   int i, j;
   unsigned int num_rows = 0, num_cols = 0;
-  fscanf(f, "%d", &num_rows);
-  fscanf(f, "%d", &num_cols);
+  fscanf_s(f, "%d", &num_rows);
+  fscanf_s(f, "%d", &num_cols);
   nml_mat *r = nml_mat_new(num_rows, num_cols);
   for(i = 0; i < r->num_rows; i++) {
     for(j = 0; j < num_cols; j++) {
-      fscanf(f, "%lf\t", &r->data[i][j]);
+      fscanf_s(f, "%lf\t", &r->data[i][j]);
     }
   }
   return r;
