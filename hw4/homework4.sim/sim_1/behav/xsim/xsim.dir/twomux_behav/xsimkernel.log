@@ -1,0 +1,7 @@
+Running: xsim.dir/twomux_behav/xsimk.exe -simmode gui -wdb twomux_behav.wdb -simrunnum 0 -socket 59025
+Design successfully loaded
+Design Loading Memory Usage: 8432 KB (Peak: 8432 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 8940 KB (Peak: 8940 KB)
+Simulation CPU Usage: 30 ms

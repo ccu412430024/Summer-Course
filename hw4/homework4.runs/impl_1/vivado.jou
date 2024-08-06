@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Aug  6 20:59:05 2024
+# Process ID: 18520
+# Current directory: D:/Ken/Verilog/projects/homework4/homework4.runs/impl_1
+# Command line: vivado.exe -log Min_Tree.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Min_Tree.tcl -notrace
+# Log file: D:/Ken/Verilog/projects/homework4/homework4.runs/impl_1/Min_Tree.vdi
+# Journal file: D:/Ken/Verilog/projects/homework4/homework4.runs/impl_1\vivado.jou
+# Running On        :DESKTOP-R0CH3C2
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+# CPU Frequency     :2808 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :17057 MB
+# Swap memory       :2550 MB
+# Total Virtual     :19607 MB
+# Available Virtual :9096 MB
+#-----------------------------------------------------------
+source Min_Tree.tcl -notrace

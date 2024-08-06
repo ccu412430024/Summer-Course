@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Ken/Verilog/projects/homework4/homework4.srcs/sources_1/new/Min_Tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Min_Tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Ken/Verilog/projects/homework4/homework4.srcs/sources_1/new/Min_Tree_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Min_Tree_tb

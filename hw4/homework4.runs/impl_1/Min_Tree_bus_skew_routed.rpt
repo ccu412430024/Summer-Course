@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Aug  6 21:00:22 2024
+| Host         : DESKTOP-R0CH3C2 running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file Min_Tree_bus_skew_routed.rpt -pb Min_Tree_bus_skew_routed.pb -rpx Min_Tree_bus_skew_routed.rpx
+| Design       : Min_Tree
+| Device       : 7k70t-fbv676
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+
